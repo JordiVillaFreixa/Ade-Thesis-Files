@@ -1,0 +1,28 @@
+# Generated with QTools, version 0.7.0
+# Date: Fri Mar  8 10:16:47 2024
+# CWD: /home3/p315462/Project/evb_final/02-relax
+# Cmdline: /home3/p315462/bin/qtools/qscripts-cli/q_genrelax.py ./genrelax.proc --top ../01_preparation/RRDiol.top --pdb ../01_preparation/RRDiol.pdb --fep ../01_preparation/fep/RRD_Diol.fep --rs ./run_relax_q.sh --outdir relax_001
+[md]
+steps                                           2000
+temperature                                     300
+stepsize                                          0.5
+bath_coupling                                   100
+lrf                                              on
+
+[cut-offs]
+q_atom                                           99
+
+[intervals]
+non_bond                                         30
+output                                          200
+trajectory                                      200
+
+[files]
+topology                                 RRDiol.top
+restart                                relax_006.re
+final                                  relax_007.re
+trajectory                            relax_007.dcd
+fep                                    RRD_Diol.fep
+
+[lambdas]
+0.90  0.10
