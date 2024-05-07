@@ -1,0 +1,43 @@
+
+------------------------------- Free energies ---------------------------------
+ Qfep_output  dG*         dG0         dG_lambda  
+ ../03-fep/replica_001000/qfep.out  None        None          -1105.41 
+ ../03-fep/replica_001001/qfep.out  None        None          -1134.64 
+ ../03-fep/replica_001002/qfep.out  None        None          -1141.41 
+ ../03-fep/replica_001003/qfep.out  None        None          -1119.44 
+ ../03-fep/replica_001004/qfep.out     -882.69     -891.02    -1007.15 
+ ../03-fep/replica_001005/qfep.out  None        None          -1106.80 
+ ../03-fep/replica_001006/qfep.out  None        None          -1127.31 
+ ../03-fep/replica_001007/qfep.out  None        None          -1115.33 
+ ../03-fep/replica_001008/qfep.out  None        None          -1016.41 
+ ../03-fep/replica_001009/qfep.out  None        None          -1122.62 
+
+----------------------------------- SUMMARY -----------------------------------
+# Analysed with: QTools/q_analysefeps.py (0.7.0)
+# Work dir: /home3/p315462/Project/RRDiol_isomer/Trail/04-calibration
+# Date: Tue Apr 30 09:50:41 2024
+# CMDline: /home3/p315462/bin/qtools/qscripts-cli/q_analysefeps.py --lra_l 0.94 0.48 ../03-fep/replica_001000 ../03-fep/replica_001001 ../03-fep/replica_001002 ../03-fep/replica_001003 ../03-fep/replica_001004 ../03-fep/replica_001005 ../03-fep/replica_001006 ../03-fep/replica_001007 ../03-fep/replica_001008 ../03-fep/replica_001009
+
+
+----- Statistics -----
+
+#                 Mean      Std.dev    Median    Std.error       N
+dG*            -882.69        nan    -882.69        nan          1
+dG0            -891.02        nan    -891.02        nan          1
+dG_lambda     -1099.65      47.69   -1117.38      15.08         10
+
+
+------- Fails --------
+
+Failed to produce dGa/dG0:
+-> ../03-fep/replica_001000/qfep.out: Bad reaction free energy profile - 0 local maxima (instead of 1)
+-> ../03-fep/replica_001001/qfep.out: Bad reaction free energy profile - 1 local minima (instead of 2)
+-> ../03-fep/replica_001002/qfep.out: Bad reaction free energy profile - 0 local maxima (instead of 1)
+-> ../03-fep/replica_001003/qfep.out: Uncaught exception: max() arg is an empty sequence
+-> ../03-fep/replica_001005/qfep.out: Bad reaction free energy profile - 0 local maxima (instead of 1)
+-> ../03-fep/replica_001006/qfep.out: Bad reaction free energy profile - 1 local minima (instead of 2)
+-> ../03-fep/replica_001007/qfep.out: Bad reaction free energy profile - 1 local minima (instead of 2)
+-> ../03-fep/replica_001008/qfep.out: Bad reaction free energy profile - 0 local minima (instead of 2)
+-> ../03-fep/replica_001009/qfep.out: Uncaught exception: max() arg is an empty sequence
+-------------------------------------------------------------------------------
+
