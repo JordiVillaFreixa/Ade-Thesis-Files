@@ -1,0 +1,28 @@
+# Generated with QTools, version 0.7.0
+# Date: Tue Apr 16 15:02:06 2024
+# CWD: /home3/p315462/Project/RRDiol_isomer/Trail/02-relax
+# Cmdline: /home3/p315462/bin/qtools/qscripts-cli/q_genrelax.py ./genrelax.proc --top ../01_preparation/RRDiol.top --pdb ../01_preparation/RRDiol.pdb --fep ../01_preparation/fep/RRD_Diol.fep --rs ./run_relax_q.sh --outdir relax_001
+[md]
+steps                                         10000
+temperature                                     300
+stepsize                                        0.1
+bath_coupling                                   100
+lrf                                              on
+
+[cut-offs]
+q_atom                                           99
+
+[intervals]
+non_bond                                         30
+output                                          200
+trajectory                                      200
+
+[files]
+topology                                 RRDiol.top
+restart                                relax_010.re
+final                                  relax_011.re
+trajectory                            relax_011.dcd
+fep                                    RRD_Diol.fep
+
+[lambdas]
+0.90  0.10

@@ -1,0 +1,12 @@
+! Read in library files
+rl ../01_preparation/qoplsaa.lib
+rl ../01_preparation/Stilbene_oxide/Stilbene_Oxidetest.lib
+rl ../01_preparation/RRDiol/RRD_Product.lib
+rl ../01_preparation/ff/H2O.lib
+! Read in parameter files
+rprm ../01_preparation/mysystem.prm
+! read in structure
+readtop ../02-relax/relax_001/RRDiol.top 
+rx      ../02-relax/relax_001/relax_016.re
+writepdb finalfep.pdb y
+quit
