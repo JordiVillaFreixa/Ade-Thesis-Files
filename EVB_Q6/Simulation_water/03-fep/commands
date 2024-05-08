@@ -1,0 +1,18 @@
+#!/bin/bash
+
+S_REPLICA=1
+N_REPLICAS=1
+
+for i in $(seq -f "%03g" $S_REPLICA $N_REPLICAS)
+        do
+	q_genfeps.py input/genfeps.proc \
+             ../02-relax/relax_$i/relax_015.inp \
+             relax \
+	     --rs input/run_feps_q.sh \
+             --repeats 10 \
+             --frames 51 \
+             --fromlambda 0.90 \
+             --pdb ../Diol_water.pdb \
+             --prefix replica_$i
+
+done
