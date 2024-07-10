@@ -1,0 +1,32 @@
+# Generated with QTools, version 0.7.0
+# Date: Sun May 12 09:01:23 2024
+# CWD: /home3/p315462/Project/Final-solvent/02-relax2
+# Cmdline: /home3/p315462/bin/qtools/qscripts-cli/q_genrelax.py ./genrelax.proc --top ../Diol_water.top --pdb ../Diol_water.pdb --fep ../fep/Diol_water.fep --rs ./run_relax_q.sh --outdir relax_001
+[md]
+steps                                         20000
+temperature                                     300
+stepsize                                        0.1
+bath_coupling                                    10
+lrf                                              on
+
+[cut-offs]
+q_atom                                           99
+
+[intervals]
+non_bond                                         30
+output                                          200
+trajectory                                      100
+
+[files]
+topology                             Diol_water.top
+restart                                relax_014.re
+final                                  relax_015.re
+trajectory                            relax_015.dcd
+fep                                  Diol_water.fep
+
+[lambdas]
+0.90  0.10
+
+[sequence_restraints]
+4      16     5.0    0     
+25     31     5.0    0     
