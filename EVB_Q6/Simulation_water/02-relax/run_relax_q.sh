@@ -1,24 +1,16 @@
-#!/bin/bash -l
-
-#!/bin/bash -l
-
 #!/bin/bash
 #SBATCH --time=20:59:00
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
 #SBATCH --mem=8gb
-#SBATCH --job-name=relax
-#SBATCH --partition=regular
+#SBATCH --job-name=relax_water
+#SBATCH --error=%J.err
+#SBATCH --output=%J.err
 
-##SBATCH --job-name=equil
-##SBATCH -A snic2022-3-2
-##SBATCH --time=20:00:00
-##SBATCH -n 1
-##SBATCH -c 16
-##SBATCH --gpus-per-task=1
+# module load GCC/11.3.0
+# alias evb="module load Anaconda3;module load GCC/11.3.0;conda activate evb"
 
-module load GCC/11.3.0
-alias evb="module load Anaconda3;module load GCC/11.3.0;conda activate evb"
+cp -r relax_001 $SCRATCHDIR
+cd $SCRATCHDIR/relax_001
 
 OK="(\033[0;32m   OK   \033[0m)"
 FAILED="(\033[0;31m FAILED \033[0m)"
